@@ -1,0 +1,65 @@
+{
+  "name": "ckd-prediction-tool",
+  "version": "1.0.0",
+  "description": "Chronic Kidney Disease Prediction Tool with Capacitor",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve -s dist",
+    "build": "mkdir -p dist && cp src/index.html dist/ && cp -r src/assets dist/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon --watch src --exec \"npm run build\"",
+    "cap:add": "npx cap add",
+    "cap:copy": "npx cap copy",
+    "cap:sync": "npx cap sync",
+    "cap:open:android": "npx cap open android",
+    "cap:open:ios": "npx cap open ios",
+    "prepare": "husky install",
+    "lint": "eslint src/**/*.js",
+    "format": "prettier --write \"src/**/*.{js,html,css}\""
+  },
+  "keywords": [
+    "capacitor",
+    "kidney",
+    "health",
+    "prediction"
+  ],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/android": "^5.0.0",
+    "@capacitor/app": "^5.0.0",
+    "@capacitor/bluetooth-le": "^1.0.0",
+    "@capacitor/cli": "^5.0.0",
+    "@capacitor/core": "^5.0.0",
+    "@capacitor/device": "^5.0.0",
+    "@capacitor/filesystem": "^5.0.0",
+    "@capacitor/ios": "^5.0.0",
+    "@capacitor/share": "^5.0.0",
+    "axios": "^1.6.2",
+    "chart.js": "^4.4.0",
+    "chartjs-plugin-datalabels": "^2.2.0",
+    "crypto-js": "^4.1.1",
+    "html2canvas": "^1.4.1",
+    "serve": "^14.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "husky": "^8.0.3",
+    "nodemon": "^3.0.2",
+    "prettier": "^3.1.1"
+  },
+  "capacitor": {
+    "ios": {
+      "minVersion": "13.0"
+    },
+    "android": {
+      "minVersion": "22"
+    }
+  },
+  "browserslist": [
+    "last 1 Chrome version",
+    "last 1 Firefox version",
+    "last 1 Safari version"
+  ]
+}
